@@ -6,10 +6,141 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+        :root{
+
+        }
+
+        #main, #principal, #fondo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #main header h1{
+            background: rgb(42, 100, 158);
+            font-style: italic;
+        }
+
+        #descripcion{
+            background: #008080;
+            color: #fff;
+        }
+
+        .myname{
+            color: #000;
+        }
+
+        #main header p{
+            margin: 10px;
+        }
+
+        #principal img{
+            width: 300px;
+        }
+
+        #principal a{
+            color: brown;
+        }
+
+        #principal a:hover{
+            color: green;
+        }
+
+        #main section input{
+            margin: 20px;
+        }
+
+    </style>
 </head>
 <body>
+    <main id="main">
+        
+        <header>
+            <h1>Mi primera página web</h1>
+
+            <p id="descripcion">
+                <strong class="myname">Joan Alcaraz López</strong><br>
+               <cite>
+                    Hola, soy <i><u>Programador junior</u></i>, siempre interesado en aprender nuevas tecnólogias Web.
+                    <br> Y me interesa el contrato formación del curso FullStack.
+               </cite>
+            </p>
+    
+            <ul>
+                <li>Me gusta Dormir</li>
+                <li>Me gusta comer Bien</li>
+                <li>Me gusta quedar con amigos</li>
+            </ul>
+        </header>
+
+
+        <section id="principal">
+            <img src="asserts/rayman-red.png" alt="Personaje Rayman">
+        
+            <a href="https://www.youtube.com/">Youtube</a>
+
+            <input type="text" name="" id="" class="text">
+            <button class="btn" >Saludar</button>
+
+        </section>
+
+        <footer id="fondo">
+            
+        </footer>
+
+    </main>
     
     <script>
+
+        function bucle(){
+            for(let i=1; i < 31; i++){
+                if( i%3 == 0 && i%5 == 0){
+                    console.log('FizzBuzz');
+                }else{
+                    if(i%3 == 0){
+                        console.log('Fizz')
+                    } else if(i%5 == 0){
+                        console.log('Buzz');
+                    } else {
+                        console.log(i);
+                    }
+                }
+            }
+        }
+        bucle();
+
+        let img = document.querySelector('#principal img');
+
+        img.addEventListener('mouseover', (e) => {
+            e.target.style.width = "400px";
+        });
+
+        img.addEventListener('mouseout', (e) => {
+            e.target.style.width = "300px";
+        });
+        
+        let btn = document.querySelector('.btn');
+
+        btn.addEventListener('click',(e) => {
+            let nombre = document.querySelector('.text').value || '';
+
+            alert('Hola Usuario ( '+nombre+' ).')
+        })
+
+        document.body.addEventListener('dblclick',(e)=> {
+            let li = document.createElement('li');
+            li.textContent = 'Me gusta aprender cosas nuevas;'
+            document.querySelector('ul').appendChild(x);
+        });
 
     </script>
     <script src="./script.js"></script>
