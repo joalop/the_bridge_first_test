@@ -10,7 +10,7 @@
     --fondoDesc: #008080;
 }
 
-#main, #principal, #fondo{
+#main, #principal{
     display: flex;
     flex-direction: column;
     justify-content: center;
