@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root{
+    --fondoH1: rgb(42, 100, 158);
+    --fondoDesc: #008080;
+}
+
+#main, #principal, #fondo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main header h1{
+    background: var(--fondoH1);
+    font-style: italic;
+}
+
+#descripcion{
+    background: var(--fondoDesc);
+    color: #fff;
+}
+
+.myname{
+    color: #000;
+}
+
+#main header p{
+    margin: 10px;
+}
+
+#principal img{
+    width: 300px;
+}
+
+#principal a{
+    color: brown;
+}
+
+#principal a:hover{
+    color: green;
+}
+
+#main section input{
+    margin: 20px;
+}
