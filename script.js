@@ -7,6 +7,7 @@ img.addEventListener('mouseover', (e) => {
 });
 
 img.addEventListener('mouseout', (e) => {
+    //e.target.style.width = "";
     e.target.style.width = "300px";
 });
 
